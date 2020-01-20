@@ -1,0 +1,19 @@
+﻿@model WebApplication4.Models.Library
+
+@{
+    ViewBag.Title = "BA Library";
+}
+
+<h1>@ViewBag.Title</h1>
+<h2>@ViewBag.Message</h2>
+<form action="/Home/AddBooks" method="post">
+
+    @Html.TextBoxFor(model => model.bookId)
+    @Html.TextBoxFor(model => model.bookName)
+    <input type="submit" value="Add">
+    @*@ViewBag.bookId
+    @ViewBag.bookName*@
+</form>
+
+
+

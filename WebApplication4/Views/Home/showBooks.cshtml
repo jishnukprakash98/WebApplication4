@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WebApplication4.Models.Library>
+
+@{
+    ViewBag.Title = "showBooks";
+}
+<form action="/Home/showBooks"></form>
+<h2>showBooks</h2>
+@if(Model != null)
+{
+    <table style="width:100%">
+        <tr>
+            <th>Book Id</th>
+            <th>Book Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => item.bookId)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.bookName)
+            </td>
+        </tr>
+        }
+    </table>
+}
